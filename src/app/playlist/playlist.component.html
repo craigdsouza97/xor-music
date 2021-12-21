@@ -1,0 +1,20 @@
+<div class="jumbotron p-0 bg-dark pt-3">
+    <ul class="list-group p-0 text-white text-left">
+        <li *ngFor="let music of files" class="list-group-item bg-dark">
+            <div (click)="setItem(music)">
+                <table>
+                    <tr>
+                        <td rowspan="3"><img class="img-thumbnail bg-dark" src="{{music.albumart}}" width="70px" height="70px"></td>
+                        <td><h6 class="name"> {{music.name}}</h6></td>
+                    </tr>
+                    <tr>
+                        <h6 class="artist">{{music.artist}}</h6>
+                    </tr>
+                    <tr>
+                        <h6 class="album">{{music.album}}</h6>
+                    </tr>
+                </table>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,22 @@
+<h3 class="text-center">Want to be a singer?</h3>
+<br>
+<div class="container" *ngIf="currentUpload" style="color: cornsilk">
+  <div class="progress">
+    <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+  </div>
+  Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+</div>
+<br>
+<div class="container">
+  <form [@fadeInOut] style="margin-left: 300px;">
+    <input type="file" (change)="detectFiles($event)">
+    <div *ngIf="selectedFiles ,else elseblock">
+      <p>1 file selected</p>
+    </div>
+    <ng-template #elseblock>
+      <p>Drag your Songs here or <a style="color: blue"><u><b>Click Here</b></u></a> to Upload.</p>
+    </ng-template>
+    <button class="btn btn-success"  (click)="uploadSingle()"> <span class="glyphicon glyphicon-cloud-upload">Upload</span></button>
+  </form>
+</div>
+     

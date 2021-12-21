@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+
+
+  <!--Your Main contents-->
+  <!-- <div *ngIf="!router.url.includes('signup')"> -->
+      <div *ngIf="flag">
+          <br><br><br><br><br><br>
+<div class="container h-100">
+
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <div class="brand_logo_container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsyabC_V528PKA3FwojbxAmrTaP0bIpbDwY3B6R-J-MFQa6B2" class="brand_logo" alt="Logo">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+        <form>
+          <div class="input-group mb-3">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="email"  class="form-control input_user" placeholder="email" #loginuseremail>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password"  class="form-control input_pass"  placeholder="password" #loginpassword>
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customControlInline">
+              <label class="custom-control-label" for="customControlInline">Remember me</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="d-flex justify-content-center mt-3 login_container">
+        <button type="button" name="button" class="btn login_btn" (click)="loginUser(loginuseremail,loginpassword)" >Login</button>
+      </div>
+      <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+          Don't have an account? <button  class="nav-link" class="ml-2" (click)="gotoSignup()" >Sign Up</button>
+        </div>
+        <div class="d-flex justify-content-center links">
+          <a href="#">Forgot your password?</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+<style>
+    #img1{
+        position: relative;
+        bottom: 250px;
+    }
+    #text1{
+        position: relative;
+        bottom: 100px;
+    }
+
+</style>
+
+
+
+ <!--Your Splash Screen-->
+ <div id="splash"  class="flex-container"
+ style ="background-color: black;"  >
+
+<!--Center align Splash contents in all screen sizes-->
+  <div id="flex-item" >
+   <img class="brand_logo" id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsyabC_V528PKA3FwojbxAmrTaP0bIpbDwY3B6R-J-MFQa6B2"
+        alt="app_icon"
+        style="width:150px ; height :150px"
+        />
+
+    <h2  id="text1" style ="color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">XOR-MUSIC</h2>
+  </div>
+</div>
+
+<div class="lds-facebook" id="pos"> <div></div><div></div><div></div></div>
+
+<router-outlet></router-outlet>
+
+
+

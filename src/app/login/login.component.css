@@ -1,0 +1,142 @@
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    bottom: 200px;
+    left: 650px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
+  }
+  
+  
+  
+            html, body, .viewport {
+              width: 100%;
+              height: 100%;
+              margin: 0;
+            }
+  
+            .flex-container {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -moz-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -moz-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              position: fixed;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+          }
+  
+          #flex-item {
+             text-align: center;
+              position: relative;
+              top: 150px;
+          }
+  
+  
+          .user_card {
+              height: 400px;
+              width: 350px;
+              margin-top: auto;
+              margin-bottom: auto;
+              background: #f39c12;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              padding: 10px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              border-radius: 5px;
+  
+          }
+          .brand_logo_container {
+              position: absolute;
+              height: 170px;
+              width: 170px;
+              top: -75px;
+              border-radius: 50%;
+              background: #60a3bc;
+              padding: 10px;
+              text-align: center;
+          }
+          .brand_logo {
+              height: 150px;
+              width: 150px;
+              border-radius: 50%;
+              border: 2px solid white;
+          }
+          .form_container {
+              margin-top: 100px;
+          }
+          .login_btn {
+              width: 100%;
+              background: #c0392b !important;
+              color: white !important;
+          }
+          .login_btn:focus {
+              box-shadow: none !important;
+              outline: 0px !important;
+          }
+          .login_container {
+              padding: 0 2rem;
+          }
+          .input-group-text {
+              background: #c0392b !important;
+              color: white !important;
+              border: 0 !important;
+              border-radius: 0.25rem 0 0 0.25rem !important;
+          }
+          .input_user,
+          .input_pass:focus {
+              box-shadow: none !important;
+              outline: 0px !important;
+          }
+  
+  
+      .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+              background-color: #c0392b !important;
+          }
+  

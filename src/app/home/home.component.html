@@ -1,0 +1,147 @@
+<nav class="navbar navbar-expand-sm  navbar-dark fixed-top" style="background-color: black">
+  <div class="container-fluid">
+  <ul class="navbar-nav">
+    <li *ngIf="close" class="nav-item" style="color: white;font-size:30px;cursor:pointer;" onclick="openNav()" (click)="call()">&#9776;</li>
+    <li *ngIf="!close" class="nav-item" style="color: white;font-size:30px;cursor:pointer;" onclick="closeNav()" (click)="call()">&#9776;</li>
+  </ul>
+  <ul class="navbar-nav" style=" margin: 0 auto" >
+    <li class="nav-item text-light" style="font-size: 38px" >
+        Welcome {{userDetail[1]}}
+      </li>
+      
+    </ul>
+
+    <ul class="navbar-nav" style="float:right" >
+      <li class="nav-item text-light" >
+          <button class="btn btn-success"  (click)="logout()"><a href="http://localhost:4200/login" style="color: aliceblue">Log Out</a></button>
+        </li>
+        
+      </ul>
+  </div>
+</nav>
+
+  <div id="mySidenav" class="sidenav" style="background-color: black">
+    
+      <button class="text-light border-0" style="background-color: black">
+        <a (click)="scroll(home)" onclick="closeNav()" (click)="call()">Home</a>
+      </button>
+  
+      <button class="text-light border-0" style="background-color: black">
+        <a (click)="scroll(album)" onclick="closeNav()" (click)="call()">Albums</a>
+      </button>
+
+      <button class="text-light border-0" style="background-color: black">
+        <a (click)="scroll(upload)" onclick="closeNav()" (click)="call()">Upload</a>
+      </button>
+
+      <button class="text-light border-0" style="background-color: black">
+        <a (click)="scroll(contact)" onclick="closeNav()" (click)="call()">Contact</a>
+      </button>
+  </div>
+<div class="container-fluid" id="home" #home>  
+  <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+  
+    <ul class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ul>
+            
+            <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="image-fluid" src="\assets\images\music1.jpg" alt="Los Angeles" width="100%">
+      </div>
+      <div class="carousel-item">
+        <img class="image-fluid" src="\assets\images\music2.jpg" alt="Chicago" width="100%">
+      </div>
+      <div class="carousel-item">
+        <img class="image-fluid" src="\assets\images\music3.jpg" alt="New York" width="100%">
+      </div>
+    </div>
+  </div>
+</div>            
+          <!-- Left and right controls -->
+<div class="container-fluid">
+  <div #album>
+    <app-albums></app-albums>
+  </div>
+</div>
+
+<div *ngIf = "play" class="mt-1">
+  <app-album ></app-album>
+</div>
+
+<div class="container-fluid mb-4 pb-1">
+  <div #upload>
+    <app-upload ></app-upload>
+  </div>
+</div>
+
+        <!-- Footer -->
+<div class="container-fluid">
+<footer class="page-footer font-small" style="background-color: rgb(194, 200, 223)">
+
+    <div style="background-color: #6351ce;">
+      <div class="container-fluid" >
+        <div class="row py-4 d-flex align-items-center " >
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0 text-light">Get connected with us on social networks!</h6>
+          </div>
+
+          <div class="col-md-6 col-lg-7 text-center text-md-right" >
+           <img  id="fb"  src=".\assets\fb.png" width=40px height=40px>
+            <img  id="twit" src=".\assets\twit.png" width=40px height=40px>
+            <img  id="u"  src=".\assets\u.png" width=40px height=40px>
+            <a class="li-ic" >
+              <i class="fab fa-linkedin-in white-text mr-4"  width=40px height=40px> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center text-md-left mt-5" id="contact" #contact>
+      <div class="row mt-3" >
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Spotify Test</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Here talent meets world and world meets real.</p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p><a href="#!">Design Labs</a></p>
+          <p><a href="#!">Music Room</a></p>
+          <p><a href="#!">Annual Band Event</a> </p>
+          <p><a href="#!">Rock on Club</a></p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p><a href="#!">Your Account</a></p>
+          <p><a href="#!">Become an Artist</a></p>
+          <p><a href="#!">Anual Fee</a></p>
+          <p><a href="#!">Help</a></p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> India, Pune 10012, US</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> test@example.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 9047835434</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 2433545656</p>
+        </div>
+      </div>
+    </div>
+    <div  class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> Test.com</a>
+    </div>
+  </footer>
+</div>  
+   
+      
+    

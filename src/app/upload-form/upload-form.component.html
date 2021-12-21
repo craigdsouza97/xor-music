@@ -1,0 +1,38 @@
+<div style="color: aliceblue">
+<div *ngIf="currentUpload">
+        <div class="progress">
+          <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+        </div>
+        Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+      </div>
+      songname:<input type="text" [(ngModel)]="songname"><br>
+      songimg:<input type="text" [(ngModel)]="songimg"><br>
+      songart:<input type="text" [(ngModel)]="songart"><br>
+
+      <select [(ngModel)]="selectedoption" (change)="uploadSingle()">
+        <option selected>International</option>
+        <option>Bollywood</option>
+        <option>LatestRelease</option>
+      </select><br>
+      
+          <label>
+             <input type="file" (change)="detectFiles($event)">
+          </label>
+      
+          <button
+                  [disabled]="!selectedFiles"
+                  (click)="uploadSingle()">
+      
+            Upload Single
+          </button>
+    
+    
+    <ul *ngFor="let item of playlist">
+      <li>Song: {{item.name}} </li>
+      <li>Path: {{item.song}} </li>
+      <li>Artist: {{item.artist}} </li>
+      <li>Image: {{item.albumart}} </li>
+    </ul>
+
+    </div>
+     
